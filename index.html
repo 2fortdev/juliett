@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" >
+  <head>
+    <title>Sandwich Rewards</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+<body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <p class="navbar-brand" >Join the Sandwich Stop's rewards program</p> 
+        <!-- Simple title to the page -->
+        <ul class="navbar-nav">
+          <li class="navitem"><a class="nav-link" href="https://github.com/2fortdev/india" target="_blank">This Page's Code</a> </li>
+          <li class="navitem"><a class="nav-link" href="https://validator.w3.org/nu/?doc=https%3A%2F%2F2fortdev.github.io%2Findia%2F" target="_blank">Page (not form) Validity!</a> </li>
+          <li class="navitem"><button id="btnLoadData" class="btn btn-secondary">load json</button></li>
+            </ul>
+    </nav>
+    <div class="container-fluid">
+
+      <div id="dataContainer"></div>
+      <!--   first row -->
+      <div class="row p-1.5 m-1.5">
+    </div>
+<form id="mainForm">
+  <!-- Form setup to keep consistant look and take in input  -->
+  <div class="tab-content">
+    <div class="tab-pane container active" id="home">
+      <div class="form-box">
+      <div class="input-group">
+        <span class="input-group-text">First and last name</span>
+        <!-- divided input box with help text -->
+        <input type="text" id="Firstname" aria-label="Firstname" class="form-control" placeholder="John" required>
+        <input type="text" id="Lastname" aria-label="Lastname" class="form-control" placeholder="Doe" required>
+        
+    </div>
+    <div id="FLname" class="form-text">
+      <!-- Form help/info -->
+      *required
+  </div>
+      <!-- Set of form inputs for various info  -->
+      <div class="input-group">
+        <span class="input-group-text">Age</span>
+        <input type="number" aria-label="Age" id="Age" class="form-control" placeholder="22" min="10" required>
+        
+      </div>
+      <div id="Age" class="form-text">
+        <!-- Form help/info -->
+        *required
+    </div>
+      <div class="input-group">
+        <span class="input-group-text">Address</span>
+        <input type="text" aria-label="Address" id="Address" class="form-control" placeholder="123 first street, city, state" required  minlength="6">
+      </div>
+      <div id="Address" class="form-text">
+        <!-- Form help/info -->
+        *required
+    </div>
+    
+     
+      <!-- A Form for inputting time that has a clock for ease of input -->
+      
+        <label for="appt">What time do you most often eat at the Stop?:</label>
+        <input type="time" id="appt" name="appt" class="form-control"  min="12:00" max="18:00">
+        <input type="submit" value="Send data">
+          please input a time when we are open
+          <br>
+      
+
+        
+              
+  
+        <!-- Select buttons -->
+        <p> <br>Please select your favorite Sandwich and side!:</p>
+        <div id = "favSand">
+          <input type="radio" id="Meat" name="fav_sandwich" value="MEAT">
+          <label for="Meat">Meatball Sub</label><br>
+          <input type="radio" id="Italian" name="fav_sandwich" value="ITALIAN">
+          <label for="Italian">Italian</label><br>
+          <input type="radio" id="Roast" name="fav_sandwich" value="ROAST">
+          <label for="Roast">Roast Beef</label> 
+      </div>
+        <br>
+        <!-- Dropdown selection  -->
+        <select class="form-select" aria-label="Default select example" disabled="disabled" name="side" id="side">
+          <option selected>What is your favorite side?</option>
+          <option value="1">Cookie</option>
+          <option value="2">Pickle</option>
+          <option value="3">Chips</option>
+        </select>
+        
+        
+        
+     <!-- check boxes -->
+    <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="email">
+    <label class="form-check-label" for="email">Get emails about new products?</label>
+    </div>
+    <div class="mb-3 form-check">
+    <input type="checkbox" class="form-check-input" id="newsletter">
+    <label class="form-check-label" for="newsletter">Get our weekly newsletter.</label>
+    </div>
+    <!-- Submit and reset buttons  -->
+    <button type="submit" class="btn btn-primary" id="submitButton">Submit</button>
+    <button type="reset" class="btn btn-primary">Reset</button>
+    </div>
+    </div>
+  </div>
+  </form>
+  <div class="container mt-3">
+    <!-- Flow selection -->
+    <p id="valid"></p>
+  <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#menu">See Our Full Menu!</button>
+  <div id="menu" class="collapse">
+    BLT, Italian, Cuban, Open-Faced Peanut Butter, Ham and Cheese
+    Roast Beef, Meatball Sub, Ruben, Veggie,
+  </div>
+  </div>
+ 
+
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
+<script  src="scripts/scripts.js"></script>
+<script  src="scripts/ajax.js"></script>
+</body>
