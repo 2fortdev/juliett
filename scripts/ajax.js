@@ -19,8 +19,8 @@
                 console.log(data.Firstname);
                 $("#Firstname").val(data.Firstname);
                 $("#Lastname").val(data.Lastname);
-                $("#Age").val(data.Age);
-                $("#Address").val(data.Address);
+                $("#Agej").val(data.Age);
+                $("#Addressj").val(data.Address);
                 $("#appt").val(data.appt);
                 $("#favSand").val(data.fav_sandwich);
                 $("#Italian").prop("checked", true).trigger("click");
